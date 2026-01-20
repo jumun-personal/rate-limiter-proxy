@@ -1,0 +1,21 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+
+queue:
+  processor-interval-ms: 999999999
+  use-lua-polling: true
+  weight:
+    order: 7
+    other: 3
+    retry-ratio: 0.7
+
+feedback-loop:
+  interval-ms: 999999999
+
+backend:
+  order-service:
+    url: http://localhost:8081
+
+prometheus:
+  url: http://localhost:9090
